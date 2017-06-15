@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="171.5" y="248.0">com.javarush.task.task27.task2710.Solution</node>
+    <node x="178.0" y="101.0">com.javarush.task.task27.task2710.MailServer</node>
+    <node x="204.0" y="0.0">com.javarush.task.task27.task2710.Mail</node>
+    <node x="0.0" y="101.0">com.javarush.task.task27.task2710.Person</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.javarush.task.task27.task2710.Person" target="com.javarush.task.task27.task2710.Mail">
+      <point x="0.0" y="-48.5" />
+      <point x="79.0" y="76.0" />
+      <point x="221.66666666666663" y="76.0" />
+      <point x="-35.33333333333334" y="25.5" />
+    </edge>
+    <edge source="com.javarush.task.task27.task2710.MailServer" target="com.javarush.task.task27.task2710.Mail">
+      <point x="0.0" y="-48.5" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="com.javarush.task.task27.task2710.Solution" target="com.javarush.task.task27.task2710.Person">
+      <point x="-56.33333333333334" y="-25.5" />
+      <point x="199.66666666666666" y="223.0" />
+      <point x="79.0" y="223.0" />
+      <point x="0.0" y="48.5" />
+    </edge>
+    <edge source="com.javarush.task.task27.task2710.Solution" target="com.javarush.task.task27.task2710.Mail">
+      <point x="56.333333333333314" y="-25.5" />
+      <point x="312.3333333333333" y="223.0" />
+      <point x="346.5" y="223.0" />
+      <point x="346.5" y="76.0" />
+      <point x="292.33333333333337" y="76.0" />
+      <point x="35.33333333333337" y="25.5" />
+    </edge>
+    <edge source="com.javarush.task.task27.task2710.Solution" target="com.javarush.task.task27.task2710.MailServer">
+      <point x="0.0" y="-25.5" />
+      <point x="0.0" y="48.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="121.0" />
+  <SelectedNodes>
+    <node>com.javarush.task.task27.task2710.Solution</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

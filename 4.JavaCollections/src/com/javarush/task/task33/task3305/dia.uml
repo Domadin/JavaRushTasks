@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="130.5" y="337.0">com.javarush.task.task33.task3305.RaceBike</node>
+    <node x="86.00000000000003" y="156.5">com.javarush.task.task33.task3305.Motorbike</node>
+    <node x="342.0" y="145.0">com.javarush.task.task33.task3305.Parking</node>
+    <node x="0.0" y="201.5">com.javarush.task.task33.task3305.Car</node>
+    <node x="104.49999999999996" y="528.0">com.javarush.task.task33.task3305.Solution</node>
+    <node x="112.50000000000001" y="0.0">com.javarush.task.task33.task3305.Auto</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.javarush.task.task33.task3305.Car" target="com.javarush.task.task33.task3305.Auto">
+      <point x="0.0" y="-14.5" />
+      <point x="33.0" y="120.0" />
+      <point x="141.33333333333337" y="120.0" />
+      <point x="-57.66666666666666" y="47.5" />
+    </edge>
+    <edge source="com.javarush.task.task33.task3305.Solution" target="com.javarush.task.task33.task3305.RaceBike">
+      <point x="23.62500000000003" y="-36.5" />
+      <point x="222.625" y="498.0" />
+      <point x="278.0" y="498.0" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="com.javarush.task.task33.task3305.RaceBike" target="com.javarush.task.task33.task3305.Motorbike">
+      <point x="0.0" y="-70.5" />
+      <point x="278.0" y="312.0" />
+      <point x="255.50000000000003" y="312.0" />
+      <point x="56.5" y="59.5" />
+    </edge>
+    <edge source="com.javarush.task.task33.task3305.Solution" target="com.javarush.task.task33.task3305.Parking">
+      <point x="70.87500000000003" y="-36.5" />
+      <point x="269.875" y="508.0" />
+      <point x="448.5" y="508.0" />
+      <point x="0.0" y="71.0" />
+    </edge>
+    <edge source="com.javarush.task.task33.task3305.Motorbike" target="com.javarush.task.task33.task3305.Auto">
+      <point x="0.0" y="-59.5" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="com.javarush.task.task33.task3305.Solution" target="com.javarush.task.task33.task3305.Motorbike">
+      <point x="-23.62499999999997" y="-36.5" />
+      <point x="175.375" y="498.0" />
+      <point x="120.0" y="498.0" />
+      <point x="120.0" y="312.0" />
+      <point x="142.50000000000003" y="312.0" />
+      <point x="-56.5" y="59.5" />
+    </edge>
+    <edge source="com.javarush.task.task33.task3305.Parking" target="com.javarush.task.task33.task3305.Auto">
+      <point x="0.0" y="-71.0" />
+      <point x="448.5" y="120.0" />
+      <point x="256.66666666666663" y="120.0" />
+      <point x="57.66666666666663" y="47.5" />
+    </edge>
+    <edge source="com.javarush.task.task33.task3305.Solution" target="com.javarush.task.task33.task3305.Car">
+      <point x="-70.87499999999997" y="-36.5" />
+      <point x="128.125" y="508.0" />
+      <point x="33.0" y="508.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="460.5" />
+  <SelectedNodes>
+    <node>com.javarush.task.task33.task3305.Auto</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

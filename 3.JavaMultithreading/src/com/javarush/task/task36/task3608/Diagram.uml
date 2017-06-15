@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1.5" y="649.0">com.javarush.task.task36.task3608.dao.UserDao</node>
+    <node x="527.7557291666665" y="0.0">java.lang.Cloneable</node>
+    <node x="750.8" y="1205.5">com.javarush.task.task36.task3608.model.FakeModel</node>
+    <node x="354.9999999999999" y="660.5">com.javarush.task.task36.task3608.model.service.UserService</node>
+    <node x="1274.8885416666662" y="682.5">com.javarush.task.task36.task3608.view.UsersView</node>
+    <node x="883.0192708333329" y="671.5">com.javarush.task.task36.task3608.model.Model</node>
+    <node x="0.0" y="391.0">com.javarush.task.task36.task3608.dao.mock.DataSource</node>
+    <node x="1119.28359375" y="1227.5">com.javarush.task.task36.task3608.view.EditUserView</node>
+    <node x="682.0192708333329" y="962.0">com.javarush.task.task36.task3608.model.ModelData</node>
+    <node x="359.7023437499998" y="1183.0">com.javarush.task.task36.task3608.model.MainModel</node>
+    <node x="410.2557291666665" y="79.0">com.javarush.task.task36.task3608.bean.User</node>
+    <node x="129.99192708333317" y="906.0">com.javarush.task.task36.task3608.model.service.UserServiceImpl</node>
+    <node x="1165.7166666666665" y="458.0">com.javarush.task.task36.task3608.view.View</node>
+    <node x="0.0" y="1536.0">com.javarush.task.task36.task3608.Util</node>
+    <node x="1158.019270833333" y="906.5">com.javarush.task.task36.task3608.controller.Controller</node>
+    <node x="1233.7583333333332" y="1440.0">com.javarush.task.task36.task3608.Solution</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.javarush.task.task36.task3608.model.FakeModel" target="com.javarush.task.task36.task3608.model.Model">
+      <point x="95.25" y="-81.0" />
+      <point x="973.05" y="1163.0" />
+      <point x="1010.0192708333329" y="1163.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.model.FakeModel" target="com.javarush.task.task36.task3608.bean.User">
+      <point x="31.75" y="-81.0" />
+      <point x="909.55" y="1163.0" />
+      <point x="872.5192708333329" y="1163.0" />
+      <point x="872.5192708333329" y="351.0" />
+      <point x="718.2557291666665" y="351.0" />
+      <point x="140.0" y="126.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.Solution" target="com.javarush.task.task36.task3608.controller.Controller">
+      <point x="21.125" y="-25.5" />
+      <point x="1339.3833333333332" y="1410.0" />
+      <point x="1401.769270833333" y="1410.0" />
+      <point x="1401.769270833333" y="1163.0" />
+      <point x="1431.3526041666662" y="1163.0" />
+      <point x="109.3333333333332" y="103.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.controller.Controller" target="com.javarush.task.task36.task3608.view.EditUserView">
+      <point x="0.0" y="103.0" />
+      <point x="1322.019270833333" y="1163.0" />
+      <point x="1333.4502604166667" y="1163.0" />
+      <point x="85.66666666666674" y="-59.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.model.service.UserServiceImpl" target="com.javarush.task.task36.task3608.model.service.UserService">
+      <point x="112.125" y="-103.5" />
+      <point x="391.61692708333317" y="886.0" />
+      <point x="430.4999999999999" y="886.0" />
+      <point x="-75.5" y="92.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.controller.Controller" target="com.javarush.task.task36.task3608.model.Model">
+      <point x="-109.33333333333326" y="-103.0" />
+      <point x="1212.6859374999997" y="886.0" />
+      <point x="1094.6859374999997" y="886.0" />
+      <point x="84.66666666666674" y="81.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.model.MainModel" target="com.javarush.task.task36.task3608.model.Model">
+      <point x="0.0" y="-103.5" />
+      <point x="525.2023437499997" y="1143.0" />
+      <point x="592.4999999999999" y="1143.0" />
+      <point x="592.4999999999999" y="886.0" />
+      <point x="925.3526041666664" y="886.0" />
+      <point x="-84.66666666666663" y="81.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.model.service.UserServiceImpl" target="com.javarush.task.task36.task3608.dao.UserDao">
+      <point x="-37.375" y="-103.5" />
+      <point x="242.11692708333317" y="886.0" />
+      <point x="249.75" y="886.0" />
+      <point x="82.75" y="103.5" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.model.MainModel" target="com.javarush.task.task36.task3608.model.ModelData">
+      <point x="132.39999999999998" y="-103.5" />
+      <point x="657.6023437499998" y="1163.0" />
+      <point x="749.5192708333329" y="1163.0" />
+      <point x="-22.5" y="47.5" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.dao.mock.DataSource" target="com.javarush.task.task36.task3608.bean.User">
+      <point x="83.5" y="-104.0" />
+      <point x="250.5" y="361.0" />
+      <point x="494.2557291666665" y="361.0" />
+      <point x="-84.0" y="126.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.view.UsersView" target="com.javarush.task.task36.task3608.view.View">
+      <point x="0.0" y="-70.0" />
+      <point x="1413.3885416666662" y="624.0" />
+      <point x="1328.4666666666665" y="624.0" />
+      <point x="54.25" y="37.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.view.UsersView" target="com.javarush.task.task36.task3608.controller.Controller">
+      <point x="0.0" y="70.0" />
+      <point x="1413.3885416666662" y="886.0" />
+      <point x="1431.3526041666662" y="886.0" />
+      <point x="109.3333333333332" y="-103.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.model.FakeModel" target="com.javarush.task.task36.task3608.model.ModelData">
+      <point x="-95.25" y="-81.0" />
+      <point x="782.55" y="1163.0" />
+      <point x="794.5192708333329" y="1163.0" />
+      <point x="22.5" y="47.5" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.bean.User" target="java.lang.Cloneable">
+      <point x="0.0" y="-126.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.model.ModelData" target="com.javarush.task.task36.task3608.bean.User">
+      <point x="-45.0" y="-47.5" />
+      <point x="727.0192708333329" y="876.0" />
+      <point x="751.8669270833332" y="876.0" />
+      <point x="751.8669270833332" y="371.0" />
+      <point x="606.2557291666665" y="371.0" />
+      <point x="28.0" y="126.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.dao.UserDao" target="com.javarush.task.task36.task3608.dao.mock.DataSource">
+      <point x="0.0" y="-103.5" />
+      <point x="0.0" y="104.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.model.service.UserServiceImpl" target="com.javarush.task.task36.task3608.bean.User">
+      <point x="37.375" y="-103.5" />
+      <point x="316.86692708333317" y="886.0" />
+      <point x="344.49999999999994" y="886.0" />
+      <point x="344.49999999999994" y="371.0" />
+      <point x="550.2557291666665" y="371.0" />
+      <point x="-28.0" y="126.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.view.EditUserView" target="com.javarush.task.task36.task3608.view.View">
+      <point x="-85.66666666666674" y="-59.0" />
+      <point x="1162.1169270833332" y="1163.0" />
+      <point x="1147.519270833333" y="1163.0" />
+      <point x="1147.519270833333" y="624.0" />
+      <point x="1219.9666666666665" y="624.0" />
+      <point x="-54.25" y="37.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.model.MainModel" target="com.javarush.task.task36.task3608.model.service.UserServiceImpl">
+      <point x="-132.39999999999998" y="-103.5" />
+      <point x="392.8023437499998" y="1163.0" />
+      <point x="279.49192708333317" y="1163.0" />
+      <point x="0.0" y="103.5" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.view.EditUserView" target="com.javarush.task.task36.task3608.controller.Controller">
+      <point x="0.0" y="-59.0" />
+      <point x="1247.78359375" y="1163.0" />
+      <point x="1212.6859374999997" y="1163.0" />
+      <point x="-109.33333333333326" y="103.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.model.MainModel" target="com.javarush.task.task36.task3608.model.service.UserService">
+      <point x="-66.19999999999993" y="-103.5" />
+      <point x="459.00234374999985" y="1133.0" />
+      <point x="581.4999999999999" y="1133.0" />
+      <point x="75.5" y="92.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.Solution" target="com.javarush.task.task36.task3608.view.EditUserView">
+      <point x="-21.125" y="-25.5" />
+      <point x="1297.1333333333332" y="1410.0" />
+      <point x="1247.78359375" y="1410.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.controller.Controller" target="com.javarush.task.task36.task3608.view.UsersView">
+      <point x="0.0" y="-103.0" />
+      <point x="-92.33333333333326" y="70.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.Solution" target="com.javarush.task.task36.task3608.view.UsersView">
+      <point x="63.37499999999994" y="-25.5" />
+      <point x="1381.6333333333332" y="1420.0" />
+      <point x="1496.519270833333" y="1420.0" />
+      <point x="1496.519270833333" y="886.0" />
+      <point x="1505.7218749999997" y="886.0" />
+      <point x="92.33333333333326" y="70.0" />
+    </edge>
+    <edge source="com.javarush.task.task36.task3608.Solution" target="com.javarush.task.task36.task3608.model.MainModel">
+      <point x="-63.375" y="-25.5" />
+      <point x="1254.8833333333332" y="1420.0" />
+      <point x="525.2023437499997" y="1420.0" />
+      <point x="0.0" y="103.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5278450363196125" x="776.0" y="816.0000000000001" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

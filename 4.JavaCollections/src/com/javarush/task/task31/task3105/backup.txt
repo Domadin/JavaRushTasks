@@ -1,0 +1,117 @@
+package com.javarush.task.task31.task3105;
+
+import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
+import java.util.zip.ZipInputStream;
+import java.util.zip.ZipOutputStream;
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        String filePath = args[0];
+        String archivePath = args[1];
+
+        Path file = Paths.get(filePath);
+        Path archive = Paths.get(archivePath);
+        try (ZipOutputStream tempZipOutputStream = new ZipOutputStream(new BufferedOutputStream(new ByteArrayOutputStream()))) {         //Временный исходящий поток для хранения информации
+
+            try (ZipInputStream zipInputStream = new ZipInputStream(new BufferedInputStream(new FileInputStream(archivePath)))) {        //Создает входящий поток для файла архива
+                ZipEntry inputZipEntry;
+                while ((inputZipEntry = zipInputStream.getNextEntry()) != null) {
+                    ZipEntry outputZipEntry = new ZipEntry(inputZipEntry.getName());
+                    tempZipOutputStream.putNextEntry(outputZipEntry);
+
+                    if (!inputZipEntry.isDirectory()) {
+                        int bytesRead;
+                        while ((bytesRead = zipInputStream.read()) > 0) {
+                            tempZipOutputStream.write(bytesRead);
+                        }
+                    }
+                    tempZipOutputStream.closeEntry();
+                }
+            }
+            try (ZipOutputStream zipOutputStream = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(archivePath)))) {
+                ZipOutputStream outputStream = new ZipOutputStream(tempZipOutputStream);
+
+            }
+        }
+    }
+}
+
+
+/*            ZipEntry zipEntry = new ZipEntry("zip.txt");
+            zipOutputStream.putNextEntry(zipEntry);*/
+//ZipOutputStream zipOutputStream = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(archivePath)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+package com.javarush.task.task31.task3105;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
+import java.util.zip.ZipOutputStream;
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        String filePath = args[0];
+        String archivePath = args[1];
+
+        Map<String, Byte[]> map = new LinkedHashMap<>();
+        try (ZipInputStream zipInputStream = new ZipInputStream(new BufferedInputStream(new FileInputStream(archivePath)))) {        //Создает входящий поток для файла архива
+            ZipEntry inputZipEntry;
+            while ((inputZipEntry = zipInputStream.getNextEntry()) != null) {
+                String key = inputZipEntry.getName();
+                Byte[] byteObjects = new Byte[0];
+                if (!inputZipEntry.isDirectory()) {
+                    byte[] bytes = new byte[(int) inputZipEntry.getSize()];
+                    byteObjects = new Byte[bytes.length];
+                    zipInputStream.read(bytes);
+                    int i = 0;
+                    for (byte b : bytes)
+                        byteObjects[i++] = b;
+                }
+                map.put(key, byteObjects);
+            }
+        }
+
+        try (ZipOutputStream zipOutputStream = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(archivePath)))) {
+            String newFilePath = "new/" + filePath.substring(filePath.lastIndexOf("\\") + 1);
+
+            ZipEntry outputZipEntry = new ZipEntry(newFilePath);
+            zipOutputStream.putNextEntry(outputZipEntry);
+            Files.copy(Paths.get(filePath), zipOutputStream);
+            zipOutputStream.closeEntry();
+
+            for (Map.Entry<String, Byte[]> pair : map.entrySet()) {
+                outputZipEntry = new ZipEntry(pair.getKey());
+                zipOutputStream.putNextEntry(outputZipEntry);
+                if (!outputZipEntry.isDirectory()) {
+                    Byte[] byteObjects = pair.getValue();
+                    byte[] bytes = new byte[byteObjects.length];
+                    int i = 0;
+                    for (Byte b : byteObjects)
+                        bytes[i++] = b;
+                    zipOutputStream.write(bytes);
+                }
+                zipOutputStream.closeEntry();
+            }
+        }
+    }
+}

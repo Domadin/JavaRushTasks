@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="350.0" y="0.0">com.javarush.task.task29.task2908.Computable</node>
+    <node x="468.99999999999994" y="146.0">com.javarush.task.task29.task2908.Copyright</node>
+    <node x="513.5" y="292.0">com.javarush.task.task29.task2908.Copyright.Period</node>
+    <node x="478.9027777777777" y="505.0">com.javarush.task.task29.task2908.Solution</node>
+    <node x="682.0" y="146.0">com.javarush.task.task29.task2908.Square</node>
+    <node x="0.0" y="101.0">com.javarush.task.task29.task2908.CacheComputeManager</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.javarush.task.task29.task2908.Copyright" target="com.javarush.task.task29.task2908.Computable">
+      <point x="0.0" y="-25.5" />
+      <point x="565.5" y="81.0" />
+      <point x="481.875" y="81.0" />
+      <point x="26.375" y="25.5" />
+    </edge>
+    <edge source="com.javarush.task.task29.task2908.Square" target="com.javarush.task.task29.task2908.Computable">
+      <point x="0.0" y="-25.5" />
+      <point x="783.0" y="71.0" />
+      <point x="534.625" y="71.0" />
+      <point x="79.125" y="25.5" />
+    </edge>
+    <edge source="com.javarush.task.task29.task2908.CacheComputeManager" target="com.javarush.task.task29.task2908.Computable">
+      <point x="-112.25" y="-70.5" />
+      <point x="112.25" y="71.0" />
+      <point x="376.375" y="71.0" />
+      <point x="-79.125" y="25.5" />
+    </edge>
+    <edge source="com.javarush.task.task29.task2908.Copyright.Period" target="com.javarush.task.task29.task2908.Copyright">
+      <point x="0.0" y="-81.5" />
+      <point x="628.0" y="267.0" />
+      <point x="613.75" y="267.0" />
+      <point x="48.25" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="436.0" y="388.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

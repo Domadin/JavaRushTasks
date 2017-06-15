@@ -1,0 +1,71 @@
+package com.javarush.task.task31.task3106;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
+import java.util.zip.ZipOutputStream;
+
+public class Solution {
+    public static void main(String[] paths) throws IOException {
+        String resultFileName = paths[0];
+
+        Set<String> zipPaths = new TreeSet<>();
+        for (int i = 1; i < paths.length; i++) {
+            zipPaths.add(paths[i]);
+        }
+
+        File tempFile = File.createTempFile("javarush-", ".tmp");
+        try (ZipOutputStream outputStream = new ZipOutputStream(new FileOutputStream(tempFile))) {
+            ZipEntry entry = new ZipEntry(resultFileName.substring(resultFileName.lastIndexOf(File.separator) + 1));
+            outputStream.putNextEntry(entry);
+            for (String filePath : zipPaths) {
+                Files.copy(Paths.get(filePath), outputStream);
+            }
+            outputStream.closeEntry();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        byte[] buffer = new byte[1024 * 4];
+        int length;
+        try (ZipInputStream inputStream = new ZipInputStream(new FileInputStream(tempFile))) {
+            inputStream.getNextEntry();
+            try (FileOutputStream outputStream = new FileOutputStream(resultFileName)) {
+                while ((length = inputStream.read(buffer)) > 0) outputStream.write(buffer, 0, length);
+            }
+        }
+    }
+}
+
+
+public class Solution {
+    public static void main(String[] paths) throws IOException {
+        String resultFileName = paths[0];
+
+        Set<String> zipPaths = new TreeSet<>();
+        for (int i = 1; i < paths.length; i++) {
+            zipPaths.add(paths[i]);
+        }
+
+        List<InputStream> streams = new ArrayList<>();
+        for (String path : zipPaths) {
+            streams.add(new FileInputStream(path));
+        }
+
+
+        try (ZipInputStream zipInputStream = new ZipInputStream(new SequenceInputStream(Collections.enumeration(streams)));
+             FileOutputStream outputStream = new FileOutputStream(resultFileName)) {
+            System.out.println(zipInputStream.getNextEntry());
+            byte[] buffer = new byte[1024 * 4];
+            int length;
+            while ((length = zipInputStream.read(buffer)) > 0) {
+                outputStream.write(buffer, 0, length);
+            }
+        }
+    }
+}

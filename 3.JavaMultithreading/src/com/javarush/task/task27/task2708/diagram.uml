@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="107.33333333333334" y="362.0">com.javarush.task.task27.task2708.Solution</node>
+    <node x="14.5625" y="192.0">com.javarush.task.task27.task2708.Apartment</node>
+    <node x="0.0" y="0.0">com.javarush.task.task27.task2708.RealEstate</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.javarush.task.task27.task2708.Apartment" target="com.javarush.task.task27.task2708.RealEstate">
+      <point x="-78.33333333333331" y="-60.0" />
+      <point x="53.729166666666686" y="167.0" />
+      <point x="41.75" y="167.0" />
+      <point x="-125.25" y="71.0" />
+    </edge>
+    <edge source="com.javarush.task.task27.task2708.Solution" target="com.javarush.task.task27.task2708.RealEstate">
+      <point x="42.24999999999997" y="-25.5" />
+      <point x="234.08333333333331" y="337.0" />
+      <point x="260.0625" y="337.0" />
+      <point x="260.0625" y="167.0" />
+      <point x="292.25" y="167.0" />
+      <point x="125.25" y="71.0" />
+    </edge>
+    <edge source="com.javarush.task.task27.task2708.RealEstate" target="com.javarush.task.task27.task2708.Apartment">
+      <point x="-41.75" y="71.0" />
+      <point x="125.25" y="167.0" />
+      <point x="132.06250000000003" y="167.0" />
+      <point x="2.8421709430404007E-14" y="-60.0" />
+    </edge>
+    <edge source="com.javarush.task.task27.task2708.Solution" target="com.javarush.task.task27.task2708.Apartment">
+      <point x="-42.25000000000003" y="-25.5" />
+      <point x="149.58333333333331" y="337.0" />
+      <point x="132.0625" y="337.0" />
+      <point x="0.0" y="60.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="185.5" y="221.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
