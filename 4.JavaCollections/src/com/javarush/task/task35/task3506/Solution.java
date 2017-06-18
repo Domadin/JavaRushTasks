@@ -7,6 +7,16 @@ import java.util.ListIterator;
 
 public class Solution {
 
+    public static Integer testInteger() {
+        try {
+            return 1;
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            return 2;
+        }
+    }
+
     public static <T> void add(List<? super T> destinationList, List<? extends T> sourceList) {
         ListIterator<? super T> destListIterator = destinationList.listIterator();
         ListIterator<? extends T> srcListIterator = sourceList.listIterator();
@@ -24,6 +34,8 @@ public class Solution {
         add(destination, source);
         System.out.println(destination);
         System.out.println(source);
+
+        System.out.println(testInteger());
 
         /*
 [com.javarush.test.level39.lesson08.task01.Solution$C@203b4f0e, com.javarush.test.level39.lesson08.task01.Solution$B@15c330aa]
